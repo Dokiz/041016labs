@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="HelloWoldapp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>test</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+      <script>
+       var m = "Hello world";
+       
+       var app = angular.module("HelloWoldapp",[]);
+           app.controller("HelloWoldCtrl", function ($scope){
+                              $scope.message = m;
+                          });
+</script>
+
+
+  </head>
+ <body ng-controller="HelloWoldCtrl">
+ 
+ <h1>{{message}}</h1>
+   
+  </body>
+</html>
