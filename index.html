@@ -7,12 +7,16 @@
     <title>test</title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
       <script>
-       var m = "Hello world";
+       var model = "Hello world";
        
-       var app = angular.module("HelloWoldapp",[]);
-           app.controller("HelloWoldCtrl", function ($scope){
-                              $scope.message = m;
-                          });
+       var HelloWoldapp = angular.module("HelloWoldapp",[]);
+           HelloWoldapp.controller("HelloWoldCtrl", function ($scope){
+                              $scope.message = model;
+                          
+						  $scope.clickHandler = function(){
+						    $scope.message=$scope.txt;
+						  }
+						});  
 </script>
 
 
@@ -20,6 +24,8 @@
  <body ng-controller="HelloWoldCtrl">
  
  <h1>{{message}}</h1>
+ <input ng-model="text"/>
+ <button ng-click="clickHandler()">Обновить</button>
    
   </body>
 </html>
