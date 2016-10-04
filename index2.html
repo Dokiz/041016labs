@@ -12,7 +12,10 @@
        var HelloWoldapp = angular.module("HelloWoldapp",[]);
            HelloWoldapp.controller("HelloWoldCtrl", function ($scope){
                               $scope.message = model;
-                     
+                          
+						  $scope.clickHandler = function(){
+						    $scope.message=$scope.text;
+						  }
 						});  
 </script>
 
@@ -21,6 +24,8 @@
  <body ng-controller="HelloWoldCtrl">
  
  <h1>{{message}}</h1>
+ <input ng-model="text"/>
+ <button ng-click="clickHandler()">Обновить</button>
    
   </body>
 </html>
